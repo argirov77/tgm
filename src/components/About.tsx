@@ -28,7 +28,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center font-poppins font-bold text-darkBlue text-3xl md:text-4xl mb-4"
         >
-          About Demetra Media
+          About TGMind AI
         </motion.h2>
 
         {/* Intro paragraph */}
@@ -39,25 +39,23 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mx-auto max-w-3xl text-center text-gray-700 text-lg md:text-xl mb-12"
         >
-          Demetra Media transforms affiliate marketing through innovative strategies, 
-          dynamic comparison websites, and a global network—delivering outstanding 
-          results for your business.
+          We find where AI creates real value in your business — and build it. Before you spend anything.
         </motion.p>
 
         {/* Feature cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {[
             {
-              title: 'Innovative Strategies',
-              text: 'We craft and implement custom marketing plans grounded in data.',
+              title: 'AI Audit',
+              text: '2 weeks. We map your processes, find automation opportunities, calculate ROI. You get a written report — regardless of what comes next.',
             },
             {
-              title: 'Dynamic Comparison Sites',
-              text: 'We build responsive comparison websites that maximize conversions and retention.',
+              title: 'Implementation',
+              text: 'Custom AI agents built into your existing tools. Support, sales, knowledge, documents — whatever the audit identifies as the highest-value starting point.',
             },
             {
-              title: 'Global Network',
-              text: 'Our extensive affiliate network gives you access to thousands of high‑quality leads.',
+              title: 'Ongoing Support',
+              text: 'Monitoring, adjustments, performance reviews. Systems that improve over time, not ones you forget about.',
             },
           ].map((card, i) => (
             <motion.div
@@ -93,7 +91,7 @@ export default function About() {
             href="#services"
             className="inline-block bg-teal hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-full shadow-md transition"
           >
-            Explore Our Services
+            See how we work
           </a>
         </motion.div>
       </div>
