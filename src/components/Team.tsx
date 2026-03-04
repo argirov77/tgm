@@ -3,53 +3,30 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 interface TeamMember {
   photo: string
   name: string
   role: string
+  bio: string
   telegram?: string
   email?: string
 }
 
 const teamMembers: TeamMember[] = [
   {
-    photo: '/assets/team/Kateryna.jpg',
-    name: 'Kateryna Shyrynian',
-    role: 'CEO',
-    email: 'ks@demetramedia.com',
+    photo: '/assets/team/Dmitriy.jpg',
+    name: 'Dmitriy Stoykov',
+    role: 'Co-Founder · Software & ML',
+    bio: 'Builds the technical architecture. Responsible for AI systems, model integration, and making sure what we promise actually works.',
+    telegram: 'argirov77',
   },
   {
-    photo: '/assets/team/Yaroslav.jpg',
-    name: 'Yaroslav Strybets',
-    role: 'Head of Affiliates',
-    telegram: 'Yaroslav_DemetraMedia',
-  },
-  {
-    photo: '/assets/team/Svetlana.jpg',
-    name: 'Svetlana Kryukova',
-    role: 'Head of Accounts',
-    telegram: 'Svetlana_DemetraMedia',
-  },
-  {
-    photo: '/assets/team/Alex.jpg',
-    name: 'Oleksandr Strelchenko',
-    role: 'Affiliate Manager',
-    telegram: 'Alex_DemetraMedia',
-  },
-  {
-    photo: '/assets/team/Anastasia.jpg',
-    name: 'Anastasia Shuliak',
-    role: 'Affiliate Manager',
-    telegram: 'Anastasiia_DemetraMedia',
-  },
-  {
-    photo: '/assets/team/Daniela.jpg',
-    name: 'Daniella Ovcharenko',
-    role: 'Account Manager',
-    telegram: 'Daniella_DemetraMedia',
+    photo: '/assets/team/Alexandr.jpg',
+    name: 'Alexandr Voytovich',
+    role: 'Co-Founder · Business Development',
+    bio: 'Finds where AI creates real value for a business. Responsible for client relationships, audits, and growth strategy.',
+    telegram: 'ManDiversity',
   },
 ]
 
@@ -73,20 +50,31 @@ export default function Team() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="inline-block relative text-center font-poppins font-bold text-darkBlue text-3xl md:text-4xl mb-12"
+          className="inline-block relative text-center font-poppins font-bold text-darkBlue text-3xl md:text-4xl mb-8"
         >
-          <span className="text-darkBlue">Meet Our</span>{' '}
-          <span className="text-teal">Team</span>
+          <span className="text-darkBlue">Who We</span>{' '}
+          <span className="text-teal">Are</span>
           <span className="absolute bottom-0 left-1/2 w-24 h-1 bg-teal -translate-x-1/2 rounded-full" />
         </motion.h2>
 
-        {/* one animation for the entire grid */}
+        {/* intro text */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+          className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed"
+        >
+          Based in Varna. Two founders — one builds the systems, one builds the relationships. We&apos;ve spent years where business operations meet AI — and we know the difference between what looks impressive and what actually works.
+        </motion.p>
+
+        {/* team grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-2xl mx-auto"
         >
           {teamMembers.map((member) => {
             const contactHref = member.telegram
@@ -94,14 +82,13 @@ export default function Team() {
               : member.email
               ? `mailto:${member.email}`
               : undefined
-            const isEmail = Boolean(member.email)
 
             return (
               <div
                 key={member.name}
                 className="group bg-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-[1.03] transition-transform p-6 flex flex-col items-center text-center"
               >
-                {/* photo (clickable if contact link exists) */}
+                {/* photo */}
                 {contactHref ? (
                   <a
                     href={contactHref}
@@ -150,7 +137,12 @@ export default function Team() {
                   {member.role}
                 </p>
 
-                {/* bottom icon */}
+                {/* bio */}
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  {member.bio}
+                </p>
+
+                {/* telegram icon */}
                 {contactHref && (
                   <a
                     href={contactHref}
@@ -158,20 +150,12 @@ export default function Team() {
                     rel="noopener noreferrer"
                     className="mt-auto"
                   >
-                    {isEmail ? (
-                      <FontAwesomeIcon
-                        icon={faEnvelope}
-                        size="lg"
-                        style={{ color: '#22d3ee' }}
-                      />
-                    ) : (
-                      <Image
-                        src="/assets/icons/telegram.svg"
-                        alt="Telegram"
-                        width={24}
-                        height={24}
-                      />
-                    )}
+                    <Image
+                      src="/assets/icons/telegram.svg"
+                      alt="Telegram"
+                      width={24}
+                      height={24}
+                    />
                   </a>
                 )}
               </div>
