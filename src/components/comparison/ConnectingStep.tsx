@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
-import Image from 'next/image'
 
 export default function ConnectingStep() {
   const ref = useRef<HTMLDivElement>(null)
@@ -49,16 +48,12 @@ export default function ConnectingStep() {
       {/* ── Левая часть: круг клиентов + итог ── */}
       <div className="flex-1 flex flex-col items-center">
         <div className="relative w-full aspect-square max-w-sm">
-          {/* центральный значок сайта */}
+          {/* центральный значок */}
           <div className="absolute inset-0 flex items-center justify-center z-10">
-            <div className="w-1/5 md:w-1/6 lg:w-1/7">
-              <Image
-                src="/assets/services/website.png"
-                alt="Website"
-                width={80}
-                height={80}
-                className="w-full h-auto drop-shadow-lg"
-              />
+            <div className="w-12 h-12 bg-teal rounded-full flex items-center justify-center drop-shadow-lg">
+              <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7 text-white" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
             </div>
           </div>
           {/* пунктирные линии к каждому клиенту */}
@@ -85,16 +80,13 @@ export default function ConnectingStep() {
             return (
               <div
                 key={i}
-                className="absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 z-20"
+                className="absolute w-10 h-10 -translate-x-1/2 -translate-y-1/2 z-20 bg-gray-100 rounded-full flex items-center justify-center shadow-sm"
                 style={{ left, top }}
               >
-                <Image
-                  src="/assets/services/customer.png"
-                  alt="Customer"
-                  width={48}
-                  height={48}
-                  className="rounded-full shadow-sm"
-                />
+                <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 text-darkBlue" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
               </div>
             )
           })}
@@ -130,9 +122,9 @@ export default function ConnectingStep() {
 
       {/* ── Правая часть: описание ── */}
       <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-3">
-        <h3 className="text-2xl md:text-3xl font-bold text-darkBlue">3. Connecting</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-darkBlue">3. Honest over comfortable</h3>
         <p className="text-gray-600 leading-relaxed">
-          We deliver highly motivated, purchase-ready users straight to your comparison pages, boosting your lead quality and conversion.
+          If AI isn&apos;t the right answer for your business after the audit — we&apos;ll tell you. We&apos;d rather lose a deal than waste your time.
         </p>
       </div>
     </div>
