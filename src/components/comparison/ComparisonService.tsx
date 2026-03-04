@@ -28,20 +28,20 @@ export default function ComparisonService() {
           transition={{ duration: 0.8 }}
           className="text-center font-poppins font-bold text-darkBlue text-4xl md:text-5xl"
         >
-          Comparison <span className="text-teal">Websites</span>
+          How We <span className="text-teal">Think</span>
         </motion.h2>
 
-        {/* 1. Identifying */}
+        {/* 1. Audit before architecture */}
         <IdentifyingStep
-          title="Identifying"
-          description="We audit search behavior to uncover exactly what your audience is looking for—and why."
+          title="Audit before architecture"
+          description="Understand the problem first. Design the solution second. We never propose a tool before we understand the business."
           query="best online language courses"
         />
 
-        {/* 2. Targeting */}
+        {/* 2. Results before invoices */}
         <TargetingStep
-          title="Targeting"
-          description="We target high-intent search segments, driving qualified users straight to your comparison pages."
+          title="Results before invoices"
+          description="We show what's possible before asking for a large commitment. The audit pays for itself."
           query="top online language learning platforms"
           results={[
             'Top online language platforms',
