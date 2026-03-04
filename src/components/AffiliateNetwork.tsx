@@ -2,34 +2,29 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 
 const STEPS = [
   {
     id: 1,
-    icon: '/assets/services/1.png',
-    title: 'Affiliate Onboarding',
-    desc: 'Fast partner approval and seamless integration into your network.',
+    title: 'AI Audit',
+    desc: 'We interview your team, map processes, identify automation opportunities. Written report in 2 weeks.',
   },
   {
     id: 2,
-    icon: '/assets/services/2.png',
-    title: 'Multi-Channel Promotion',
-    desc: 'Launch across email, social, search & native for maximum reach.',
+    title: 'Roadmap',
+    desc: 'Prioritized plan: what to build first, expected ROI, timeline. Included in the audit.',
   },
   {
     id: 3,
-    icon: '/assets/services/3.png',
-    title: 'Live Analytics & Optimization',
-    desc: 'Real-time dashboard to track KPIs and tweak campaigns on the fly.',
+    title: 'Implementation',
+    desc: 'Custom AI agents integrated into your existing tools and workflows. 4–8 weeks.',
   },
   {
     id: 4,
-    icon: '/assets/services/4.png',
-    title: 'Revenue Scaling',
-    desc: 'Proven strategies to grow your affiliate income.',
+    title: 'Support',
+    desc: 'Monitoring, updates, performance reviews. Systems that improve, not ones you forget about.',
   },
 ]
 
@@ -78,7 +73,7 @@ export default function AffiliateNetwork() {
       <div className="relative z-10 container mx-auto px-6">
         {/* Заголовок */}
         <h2 className="text-center font-poppins font-bold text-darkBlue text-4xl md:text-5xl mb-12">
-          Affiliate <span className="text-teal">Network</span>
+          What We <span className="text-teal">Do</span>
         </h2>
 
         <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-8">
@@ -95,13 +90,6 @@ export default function AffiliateNetwork() {
                              from-teal to-darkBlue -translate-x-1/2 rounded-full"
                 />
                 <div className="mt-4 text-center space-y-3 z-10 relative">
-                  <Image
-                    src={step.icon}
-                    alt={step.title}
-                    width={48}
-                    height={48}
-                    className="mx-auto"
-                  />
                   <h3 className="text-lg font-semibold text-darkBlue">
                     {step.title}
                   </h3>
@@ -151,12 +139,11 @@ export default function AffiliateNetwork() {
         {/* Кнопка приглашения */}
         <motion.div className="mt-12 text-center" variants={cardVariants}>
           <Link
-            href="https://demetramedia.affise.com/v2/sign/up"
-            target="_blank"
+            href="mailto:hello@tgmind-ai.com"
             className="inline-block bg-teal hover:bg-teal-700 text-white px-8 py-3 rounded-full
                        font-medium shadow-lg transition-colors duration-300"
           >
-            Join Affiliate Program
+            Get in touch
           </Link>
         </motion.div>
       </div>
