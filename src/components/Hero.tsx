@@ -1,25 +1,10 @@
 // src/components/Hero.jsx
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-
-const keyPhrases = [
-  'Innovative Solutions',
-  'High Conversion Rates',
-  'Cutting-Edge Strategies',
-  'Data-Driven Growth',
-]
+import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
-  const [idx, setIdx] = useState(0)
-
-  useEffect(() => {
-    const iv = setInterval(() => {
-      setIdx(i => (i + 1) % keyPhrases.length)
-    }, 3500)
-    return () => clearInterval(iv)
-  }, [])
 
   return (
     <section className="relative bg-white pt-28 pb-60 overflow-hidden">
@@ -73,44 +58,31 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-poppins text-darkBlue text-5xl md:text-6xl lg:text-7xl font-bold mb-12"
         >
-          Grow Your Business with{' '}
-          <span className="text-teal">Demetra Media</span>
+          <span>Your competitors</span>
+          {' '}
+          <em>are already using AI.</em>
+          {' '}
+          <span className="text-gray-400">The question is when you will.</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row justify-center items-center gap-x-4 gap-y-2 text-2xl md:text-3xl mb-16"
+          className="flex flex-col justify-center items-center gap-y-1 text-2xl md:text-3xl mb-16"
         >
-          <span className="font-medium text-gray-700">Experience</span>
-          <div className="relative overflow-hidden w-[24ch] h-[1.3em]">
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 whitespace-nowrap text-teal font-semibold"
-              >
-                {keyPhrases[idx]}
-              </motion.span>
-            </AnimatePresence>
-          </div>
+          <span className="font-medium text-gray-700">Audit. Roadmap. Implementation.</span>
+          <span className="text-teal font-semibold">Varna-based, working across Europe.</span>
         </motion.div>
 
-        {/* Заменили «Get Started» на кнопку партнёра */}
         <motion.a
-          href="https://demetramedia.affise.com/v2/sign/up"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:hello@tgmind-ai.com"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="inline-block bg-teal hover:bg-teal-700 text-white px-12 py-4 rounded-lg font-medium shadow-lg transition"
         >
-          Join Affiliate Program
+          Get in touch
         </motion.a>
       </div>
 
