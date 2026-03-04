@@ -3,13 +3,15 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
-// Ваши три шага
 import IdentifyingStep from './IdentifyingStep'
 import TargetingStep   from './TargetingStep'
 import ConnectingStep  from './ConnectingStep'
 
 export default function ComparisonService() {
+  const { t } = useLanguage()
+
   return (
     <motion.section
       id="comparison"
@@ -20,7 +22,7 @@ export default function ComparisonService() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div className="container mx-auto px-4 space-y-24">
-        {/* Заголовок раздела */}
+        {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,26 +30,22 @@ export default function ComparisonService() {
           transition={{ duration: 0.8 }}
           className="text-center font-poppins font-bold text-darkBlue text-4xl md:text-5xl"
         >
-          How We <span className="text-teal">Think</span>
+          {t.comparison.title} <span className="text-teal">{t.comparison.titleHighlight}</span>
         </motion.h2>
 
         {/* 1. Audit before architecture */}
         <IdentifyingStep
-          title="Audit before architecture"
-          description="Understand the problem first. Design the solution second. We never propose a tool before we understand the business."
-          query="best online language courses"
+          title={t.comparison.step1Title}
+          description={t.comparison.step1Desc}
+          query={t.comparison.step1Query}
         />
 
         {/* 2. Results before invoices */}
         <TargetingStep
-          title="Results before invoices"
-          description="We show what's possible before asking for a large commitment. The audit pays for itself."
-          query="top online language learning platforms"
-          results={[
-            'Top online language platforms',
-            'User reviews & ratings',
-            'Best language course websites',
-          ]}
+          title={t.comparison.step2Title}
+          description={t.comparison.step2Desc}
+          query={t.comparison.step2Query}
+          results={[...t.comparison.step2Results]}
         />
 
         {/* 3. Connecting */}

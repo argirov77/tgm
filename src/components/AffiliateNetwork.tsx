@@ -4,29 +4,7 @@
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
-
-const STEPS = [
-  {
-    id: 1,
-    title: 'AI Audit',
-    desc: 'We interview your team, map processes, identify automation opportunities. Written report in 2 weeks.',
-  },
-  {
-    id: 2,
-    title: 'Roadmap',
-    desc: 'Prioritized plan: what to build first, expected ROI, timeline. Included in the audit.',
-  },
-  {
-    id: 3,
-    title: 'Implementation',
-    desc: 'Custom AI agents integrated into your existing tools and workflows. 4–8 weeks.',
-  },
-  {
-    id: 4,
-    title: 'Support',
-    desc: 'Monitoring, updates, performance reviews. Systems that improve, not ones you forget about.',
-  },
-]
+import { useLanguage } from '@/context/LanguageContext'
 
 const containerVariants: Variants = {
   hidden: {},
@@ -49,6 +27,15 @@ const lineVariants: Variants = {
 }
 
 export default function AffiliateNetwork() {
+  const { t } = useLanguage()
+
+  const STEPS = [
+    { id: 1, title: t.affiliateNetwork.step1Title, desc: t.affiliateNetwork.step1Desc },
+    { id: 2, title: t.affiliateNetwork.step2Title, desc: t.affiliateNetwork.step2Desc },
+    { id: 3, title: t.affiliateNetwork.step3Title, desc: t.affiliateNetwork.step3Desc },
+    { id: 4, title: t.affiliateNetwork.step4Title, desc: t.affiliateNetwork.step4Desc },
+  ]
+
   return (
     <motion.section
       id="affiliate"
@@ -58,7 +45,7 @@ export default function AffiliateNetwork() {
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      {/* Фоновые диагонали */}
+      {/* Background diagonals */}
       <div
         className="absolute top-0 left-0 w-2/3 h-full bg-teal-100 opacity-20
                    transform -rotate-12 origin-top-left pointer-events-none"
@@ -71,15 +58,14 @@ export default function AffiliateNetwork() {
       />
 
       <div className="relative z-10 container mx-auto px-6">
-        {/* Заголовок */}
+        {/* Title */}
         <h2 className="text-center font-poppins font-bold text-darkBlue text-4xl md:text-5xl mb-12">
-          What We <span className="text-teal">Do</span>
+          {t.affiliateNetwork.title} <span className="text-teal">{t.affiliateNetwork.titleHighlight}</span>
         </h2>
 
         <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-8">
           {STEPS.map((step, i) => (
             <React.Fragment key={step.id}>
-              {/* Карточка без масштабирования */}
               <motion.div
                 variants={cardVariants}
                 className="relative flex-1 max-w-xs bg-white rounded-2xl p-6 shadow-lg
@@ -97,7 +83,7 @@ export default function AffiliateNetwork() {
                 </div>
               </motion.div>
 
-              {/* Соединительная линия */}
+              {/* Connector line */}
               {i < STEPS.length - 1 && (
                 <>
                   {/* Desktop */}
@@ -136,14 +122,14 @@ export default function AffiliateNetwork() {
           ))}
         </motion.div>
 
-        {/* Кнопка приглашения */}
+        {/* CTA button */}
         <motion.div className="mt-12 text-center" variants={cardVariants}>
           <Link
             href="mailto:hello@tgmind-ai.com"
             className="inline-block bg-teal hover:bg-teal-700 text-white px-8 py-3 rounded-full
                        font-medium shadow-lg transition-colors duration-300"
           >
-            Get in touch
+            {t.affiliateNetwork.cta}
           </Link>
         </motion.div>
       </div>
