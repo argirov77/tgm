@@ -3,16 +3,18 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
 
   return (
     <section className="relative bg-white pt-28 pb-60 overflow-hidden">
-      {/* === «волны» в нижнем правом углу === */}
+      {/* waves bottom-right */}
       <div
         className="absolute bottom-0 right-0 pointer-events-none overflow-hidden"
         style={{
-          width: '140%',      // растянули, чтобы волны выходили за границы
+          width: '140%',
           height: '60%',
           minHeight: '200px',
           transform: 'translateX(15%) translateY(10%)',
@@ -41,7 +43,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* радиальный градиент для повышения читабельности */}
+      {/* radial gradient for readability */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -50,7 +52,7 @@ export default function Hero() {
         }}
       />
 
-      {/* === контент Hero === */}
+      {/* Hero content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -58,11 +60,11 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-poppins text-darkBlue text-5xl md:text-6xl lg:text-7xl font-bold mb-12"
         >
-          <span>Your competitors</span>
+          <span>{t.hero.line1}</span>
           {' '}
-          <em>are already using AI.</em>
+          <em>{t.hero.line2}</em>
           {' '}
-          <span className="text-gray-400">The question is when you will.</span>
+          <span className="text-gray-400">{t.hero.line3}</span>
         </motion.h1>
 
         <motion.div
@@ -71,8 +73,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col justify-center items-center gap-y-1 text-2xl md:text-3xl mb-16"
         >
-          <span className="font-medium text-gray-700">Audit. Roadmap. Implementation.</span>
-          <span className="text-teal font-semibold">Varna-based, working across Europe.</span>
+          <span className="font-medium text-gray-700">{t.hero.sub1}</span>
+          <span className="text-teal font-semibold">{t.hero.sub2}</span>
         </motion.div>
 
         <motion.a
@@ -82,11 +84,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="inline-block bg-teal hover:bg-teal-700 text-white px-12 py-4 rounded-lg font-medium shadow-lg transition"
         >
-          Get in touch
+          {t.hero.cta}
         </motion.a>
       </div>
 
-      {/* SVG-переход в следующую секцию */}
+      {/* SVG transition to next section */}
       <div
         className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none"
         style={{ height: '120px' }}

@@ -2,32 +2,31 @@
 'use client'
 
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-darkBlue text-white py-12">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* —————————————————————————————————————————————————————————————————————————
-             Логотип в виде текста + копирайт
-        ————————————————————————————————————————————————————————————————————————— */}
+        {/* Logo + copyright */}
         <div className="flex flex-col items-center md:items-start space-y-4">
           <h3 className="font-poppins font-bold text-3xl text-white">
             TGMind <span className="text-teal">AI</span>
           </h3>
           <p className="text-sm opacity-80">
             © {new Date().getFullYear()} TGMind AI<br />
-            All rights reserved.
+            {t.footer.copyright}
           </p>
         </div>
 
-        {/* —————————————————————————————————————————————————————————————————————————
-             Контакты и «Connect»
-        ————————————————————————————————————————————————————————————————————————— */}
+        {/* Contact & Connect */}
         <div className="flex flex-col items-center md:items-end space-y-6">
-          {/* Контакт */}
+          {/* Contact */}
           <div className="text-center md:text-right space-y-2">
             <h4 className="text-xl font-semibold underline decoration-teal-400 underline-offset-4">
-              Contact
+              {t.footer.contact}
             </h4>
             <Link
               href="mailto:hello@tgmind-ai.com"
@@ -54,7 +53,7 @@ export default function Footer() {
           {/* Connect */}
           <div className="text-center md:text-right space-y-2">
             <h4 className="text-xl font-semibold underline decoration-teal-400 underline-offset-4">
-              Connect
+              {t.footer.connect}
             </h4>
             <Link
               href="https://linkedin.com/company/tgmind-ai"

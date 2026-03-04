@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useLanguage } from '@/context/LanguageContext'
 
 interface TeamMember {
   photo: string
@@ -13,24 +14,26 @@ interface TeamMember {
   email?: string
 }
 
-const teamMembers: TeamMember[] = [
-  {
-    photo: '/assets/team/Dmitriy.jpg',
-    name: 'Dmitriy Stoykov',
-    role: 'Co-Founder · Software & ML',
-    bio: 'Builds the technical architecture. Responsible for AI systems, model integration, and making sure what we promise actually works.',
-    telegram: 'argirov77',
-  },
-  {
-    photo: '/assets/team/Alexandr.jpg',
-    name: 'Alexandr Voytovich',
-    role: 'Co-Founder · Business Development',
-    bio: 'Finds where AI creates real value for a business. Responsible for client relationships, audits, and growth strategy.',
-    telegram: 'ManDiversity',
-  },
-]
-
 export default function Team() {
+  const { t } = useLanguage()
+
+  const teamMembers: TeamMember[] = [
+    {
+      photo: '/assets/team/Dmitriy.jpg',
+      name: 'Dmitriy Stoykov',
+      role: t.team.member1Role,
+      bio: t.team.member1Bio,
+      telegram: 'argirov77',
+    },
+    {
+      photo: '/assets/team/Alexandr.jpg',
+      name: 'Alexandr Voytovich',
+      role: t.team.member2Role,
+      bio: t.team.member2Bio,
+      telegram: 'ManDiversity',
+    },
+  ]
+
   return (
     <section id="team" className="relative bg-gray-50 py-20 overflow-hidden">
       {/* decorative diagonals */}
@@ -52,8 +55,8 @@ export default function Team() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="inline-block relative text-center font-poppins font-bold text-darkBlue text-3xl md:text-4xl mb-8"
         >
-          <span className="text-darkBlue">Who We</span>{' '}
-          <span className="text-teal">Are</span>
+          <span className="text-darkBlue">{t.team.title}</span>{' '}
+          <span className="text-teal">{t.team.titleHighlight}</span>
           <span className="absolute bottom-0 left-1/2 w-24 h-1 bg-teal -translate-x-1/2 rounded-full" />
         </motion.h2>
 
@@ -65,7 +68,7 @@ export default function Team() {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
           className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed"
         >
-          Based in Varna. Two founders — one builds the systems, one builds the relationships. We&apos;ve spent years where business operations meet AI — and we know the difference between what looks impressive and what actually works.
+          {t.team.intro}
         </motion.p>
 
         {/* team grid */}
