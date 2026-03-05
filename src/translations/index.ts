@@ -3,9 +3,8 @@ export type Language = 'en' | 'ru' | 'bg'
 export const translations = {
   en: {
     nav: {
-      home: 'Home',
-      about: 'About',
-      services: 'Services',
+      about: 'Approach',
+      services: 'Process',
       team: 'Team',
     },
     hero: {
@@ -68,9 +67,8 @@ export const translations = {
   },
   ru: {
     nav: {
-      home: 'Главная',
-      about: 'О нас',
-      services: 'Услуги',
+      about: 'Подход',
+      services: 'Процесс',
       team: 'Команда',
     },
     hero: {
@@ -133,9 +131,8 @@ export const translations = {
   },
   bg: {
     nav: {
-      home: 'Начало',
-      about: 'За нас',
-      services: 'Услуги',
+      about: 'Подход',
+      services: 'Процес',
       team: 'Екип',
     },
     hero: {
