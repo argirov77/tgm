@@ -1,4 +1,4 @@
-// src/components/AffiliateNetwork.tsx
+// src/components/HowWeWork.tsx
 'use client'
 
 import React from 'react'
@@ -26,19 +26,18 @@ const lineVariants: Variants = {
   visible: { pathLength: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
 }
 
-export default function AffiliateNetwork() {
+export default function HowWeWork() {
   const { t } = useLanguage()
 
   const STEPS = [
-    { id: 1, title: t.affiliateNetwork.step1Title, desc: t.affiliateNetwork.step1Desc },
-    { id: 2, title: t.affiliateNetwork.step2Title, desc: t.affiliateNetwork.step2Desc },
-    { id: 3, title: t.affiliateNetwork.step3Title, desc: t.affiliateNetwork.step3Desc },
-    { id: 4, title: t.affiliateNetwork.step4Title, desc: t.affiliateNetwork.step4Desc },
+    { id: 1, title: t.howWeWork.step1Title, desc: t.howWeWork.step1Desc },
+    { id: 2, title: t.howWeWork.step2Title, desc: t.howWeWork.step2Desc },
+    { id: 3, title: t.howWeWork.step3Title, desc: t.howWeWork.step3Desc },
+    { id: 4, title: t.howWeWork.step4Title, desc: t.howWeWork.step4Desc },
   ]
 
   return (
     <motion.section
-      id="affiliate"
       className="relative py-24 overflow-hidden"
       style={{ backgroundColor: '#0F172A' }}
       initial="hidden"
@@ -60,7 +59,7 @@ export default function AffiliateNetwork() {
       <div className="relative z-10 container mx-auto px-6">
         {/* Title */}
         <h2 className="text-center font-space-grotesk font-semibold text-4xl md:text-5xl mb-12" style={{ color: '#E5E7EB' }}>
-          {t.affiliateNetwork.title} <span style={{ color: '#3B82F6' }}>{t.affiliateNetwork.titleHighlight}</span>
+          {t.howWeWork.title} <span style={{ color: '#3B82F6' }}>{t.howWeWork.titleHighlight}</span>
         </h2>
 
         <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-8">
@@ -136,7 +135,7 @@ export default function AffiliateNetwork() {
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#2563EB')}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#3B82F6')}
           >
-            {t.affiliateNetwork.cta}
+            {t.howWeWork.cta}
           </Link>
         </motion.div>
       </div>

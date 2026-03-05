@@ -27,7 +27,7 @@ export const translations = {
       card3Text: 'We focus on measurable outcomes: revenue growth, cost reduction, or process acceleration. If a technology doesn\'t create measurable impact for your business, we won\'t propose it. Our goal is long-term effectiveness, not a one-time deal.',
       cta: 'See how we work',
     },
-    affiliateNetwork: {
+    howWeWork: {
       title: 'How We',
       titleHighlight: 'Work',
       step1Title: 'AI Audit',
@@ -92,7 +92,7 @@ export const translations = {
       card3Text: 'Мы ориентированы на результат внедрения: рост выручки, снижение затрат или ускорение процессов. Если технология не создаёт измеримого эффекта для бизнеса, мы не предлагаем её внедрение. Наша цель — долгосрочная эффективность, а не разовая сделка.',
       cta: 'Посмотреть, как мы работаем',
     },
-    affiliateNetwork: {
+    howWeWork: {
       title: 'Как мы',
       titleHighlight: 'работаем',
       step1Title: 'ИИ-аудит',
@@ -157,7 +157,7 @@ export const translations = {
       card3Text: 'Ориентирани сме към резултата от внедряването: ръст на приходите, намаляване на разходите или ускоряване на процесите. Ако технологията не създава измерим ефект за бизнеса, не предлагаме внедряването й. Нашата цел е дългосрочна ефективност, а не еднократна сделка.',
       cta: 'Вижте как работим',
     },
-    affiliateNetwork: {
+    howWeWork: {
       title: 'Как',
       titleHighlight: 'работим',
       step1Title: 'ИИ одит',
