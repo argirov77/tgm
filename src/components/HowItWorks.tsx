@@ -28,15 +28,16 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-white py-20">
+    <section id="how-it-works" className="py-20" style={{ backgroundColor: '#111827' }}>
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl font-poppins font-bold text-darkBlue text-center mb-12"
+          className="text-3xl md:text-4xl font-space-grotesk font-semibold text-center mb-12"
+          style={{ color: '#E5E7EB' }}
         >
-          How It <span className="text-teal">Works</span>
+          How It <span style={{ color: '#06B6D4' }}>Works</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -46,7 +47,13 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-lightGray rounded-lg p-6 shadow-md flex flex-col items-center text-center relative"
+              className="p-6 flex flex-col items-center text-center relative"
+              style={{
+                backgroundColor: '#0F172A',
+                borderRadius: '12px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
             >
               <Image
                 src={step.icon}
@@ -55,9 +62,8 @@ export default function HowItWorks() {
                 height={70}
                 className="mb-4"
               />
-              <h3 className="text-lg font-bold mb-2 text-darkBlue">{step.title}</h3>
-              <p className="text-sm">{step.description}</p>
-              {/* Здесь можно добавить SVG-стрелку, если требуется */}
+              <h3 className="font-space-grotesk text-lg font-semibold mb-2" style={{ color: '#E5E7EB' }}>{step.title}</h3>
+              <p className="font-inter text-sm" style={{ color: '#9CA3AF' }}>{step.description}</p>
             </motion.div>
           ))}
         </div>

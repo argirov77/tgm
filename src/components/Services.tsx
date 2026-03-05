@@ -6,7 +6,7 @@ import AffiliateNetwork from './AffiliateNetwork'
 
 export default function Services() {
   return (
-    <section id="services" className="bg-gray-100 py-20">
+    <section id="services" className="py-20" style={{ backgroundColor: '#0F172A' }}>
       <div className="container mx-auto px-4 space-y-20">
         <AffiliateNetwork />
       </div>
