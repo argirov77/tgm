@@ -36,17 +36,6 @@ export default function Hero() {
           <span style={{ color: '#9CA3AF', fontWeight: 400 }}>{t.hero.line3}</span>
         </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col justify-start items-start gap-y-1 text-2xl md:text-3xl mb-16"
-          style={{ textAlign: 'left' }}
-        >
-          <span className="font-inter font-medium" style={{ color: '#E5E7EB' }}>{t.hero.sub1}</span>
-          <span className="font-inter" style={{ color: '#9CA3AF', fontWeight: 400 }}>{t.hero.sub2}</span>
-        </motion.div>
-
         <motion.a
           href="mailto:hello@tgmind-ai.com"
           initial={{ opacity: 0, scale: 0.8 }}

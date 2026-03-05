@@ -11,8 +11,6 @@ export const translations = {
       line1: 'Your competitors',
       line2: 'are already using AI.',
       line3: 'The question is when you will.',
-      sub1: 'Audit. Roadmap. Implementation.',
-      sub2: 'Varna-based, working across Europe.',
       cta: 'Get in touch',
     },
     about: {
@@ -75,8 +73,6 @@ export const translations = {
       line1: 'Ваши конкуренты',
       line2: 'уже используют ИИ.',
       line3: 'Вопрос в том, когда начнёте вы.',
-      sub1: 'Аудит. Дорожная карта. Внедрение.',
-      sub2: 'Базируемся в Варне, работаем по всей Европе.',
       cta: 'Связаться с нами',
     },
     about: {
@@ -139,8 +135,6 @@ export const translations = {
       line1: 'Вашите конкуренти',
       line2: 'вече използват ИИ.',
       line3: 'Въпросът е кога ще започнете вие.',
-      sub1: 'Одит. Пътна карта. Внедряване.',
-      sub2: 'Базирани във Варна, работим в цяла Европа.',
       cta: 'Свържете се с нас',
     },
     about: {
