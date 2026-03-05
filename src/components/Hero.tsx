@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section className="relative bg-white pt-28 pb-60 overflow-hidden">
-      {/* waves bottom-right */}
+      {/* Neutral wave bottom-right */}
       <div
         className="absolute bottom-0 right-0 pointer-events-none overflow-hidden"
         style={{
@@ -27,18 +27,18 @@ export default function Hero() {
         >
           <path
             d="M0,350 C360,310 720,400 1440,350 L1440,600 0,600 Z"
-            fill="#00C2D1"
-            fillOpacity="0.4"
+            fill="#F3F4F6"
+            fillOpacity="0.8"
           />
           <path
             d="M0,380 C360,340 720,430 1440,380 L1440,600 0,600 Z"
-            fill="#007ACC"
-            fillOpacity="0.3"
+            fill="#E5E7EB"
+            fillOpacity="0.6"
           />
           <path
             d="M0,410 C360,370 720,460 1440,410 L1440,600 0,600 Z"
-            fill="#00347E"
-            fillOpacity="0.2"
+            fill="#D1D5DB"
+            fillOpacity="0.4"
           />
         </svg>
       </div>
@@ -48,33 +48,35 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle at center, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 80%)',
+            'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.85) 50%, transparent 80%)',
         }}
       />
 
-      {/* Hero content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      {/* Hero content — left-aligned */}
+      <div className="relative z-10 container mx-auto px-4" style={{ paddingLeft: '10%' }}>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-poppins text-darkBlue text-5xl md:text-6xl lg:text-7xl font-bold mb-12"
+          className="font-space-grotesk text-darkBlue text-5xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight"
+          style={{ textAlign: 'left' }}
         >
-          <span>{t.hero.line1}</span>
-          {' '}
-          <em>{t.hero.line2}</em>
-          {' '}
-          <span className="text-gray-400">{t.hero.line3}</span>
+          <span className="font-normal">{t.hero.line1}</span>
+          <br />
+          <em className="font-bold not-italic">{t.hero.line2}</em>
+          <br />
+          <span style={{ color: '#9CA3AF', fontWeight: 400 }}>{t.hero.line3}</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col justify-center items-center gap-y-1 text-2xl md:text-3xl mb-16"
+          className="flex flex-col justify-start items-start gap-y-1 text-2xl md:text-3xl mb-16"
+          style={{ textAlign: 'left' }}
         >
           <span className="font-medium text-gray-700">{t.hero.sub1}</span>
-          <span className="text-teal font-semibold">{t.hero.sub2}</span>
+          <span style={{ color: '#6B7280', fontWeight: 400 }}>{t.hero.sub2}</span>
         </motion.div>
 
         <motion.a
@@ -82,7 +84,13 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="inline-block bg-teal hover:bg-teal-700 text-white px-12 py-4 rounded-lg font-medium shadow-lg transition"
+          className="inline-block text-white px-10 py-3 font-medium shadow-md transition"
+          style={{
+            backgroundColor: '#0066FF',
+            borderRadius: '6px',
+          }}
+          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#0052CC')}
+          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#0066FF')}
         >
           {t.hero.cta}
         </motion.a>

@@ -13,10 +13,13 @@ const config: Config = {
         darkBlue: "#00347E",
         purple: "#4B0082",
         lightGray: "#F9F9F9",
+        primary: "#0066FF",
+        "primary-hover": "#0052CC",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        "space-grotesk": ["Space Grotesk", "sans-serif"],
       },
     },
   },
