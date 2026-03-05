@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Demetra Media',
+  title: 'TGMind AI',
   description:
-    'Demetra Media transforms affiliate marketing through innovative strategies, dynamic comparison websites, and a global network—delivering outstanding results for your business.',
+    'TGMind AI delivers cutting-edge artificial intelligence solutions, empowering businesses with innovative strategies and a global network for outstanding results.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
