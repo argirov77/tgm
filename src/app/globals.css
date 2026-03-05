@@ -1,5 +1,5 @@
 /* globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
 
 /* Дополнительные глобальные стили (при необходимости) */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 html, body {
   scroll-behavior: smooth;
@@ -34,6 +34,21 @@ body {
   }
   .text-glow {
     text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .bg-primary {
+    background-color: #0066FF;
+  }
+  .hover\:bg-primary-hover:hover {
+    background-color: #0052CC;
+  }
+  .text-dim {
+    color: #9CA3AF;
+  }
+  .text-muted {
+    color: #6B7280;
+  }
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 html {
