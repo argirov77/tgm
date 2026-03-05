@@ -54,6 +54,17 @@ export const translations = {
       contact: 'Contact',
       connect: 'Connect',
     },
+    comparison: {
+      title: 'How We',
+      titleHighlight: 'Find Your Clients',
+      step1Title: 'Audit Before Architecture',
+      step1Desc: 'We start with a deep audit of your current processes and identify exactly where AI can create measurable value — before writing a single line of code.',
+      step1Query: 'AI audit for business processes',
+      step2Title: 'Results Before Invoices',
+      step2Desc: 'We show you the expected outcomes and ROI before you commit. You see the plan, the timeline, and the projected impact — then decide.',
+      step2Query: 'AI implementation ROI calculator',
+      step2Results: ['3× faster lead qualification', 'Automated client follow-ups', 'Reduced manual data entry by 80%'],
+    },
   },
   ru: {
     nav: {
@@ -108,6 +119,17 @@ export const translations = {
       contact: 'Контакты',
       connect: 'Связаться',
     },
+    comparison: {
+      title: 'Как мы',
+      titleHighlight: 'находим ваших клиентов',
+      step1Title: 'Аудит до архитектуры',
+      step1Desc: 'Мы начинаем с глубокого аудита ваших процессов и определяем, где именно ИИ создаст измеримую ценность — до написания первой строки кода.',
+      step1Query: 'ИИ аудит бизнес-процессов',
+      step2Title: 'Результаты до счетов',
+      step2Desc: 'Мы показываем ожидаемые результаты и ROI до принятия решения. Вы видите план, сроки и прогнозируемый эффект — и только потом решаете.',
+      step2Query: 'ROI от внедрения ИИ',
+      step2Results: ['Квалификация лидов в 3× быстрее', 'Автоматические follow-up с клиентами', 'Снижение ручного ввода данных на 80%'],
+    },
   },
   bg: {
     nav: {
@@ -161,6 +183,17 @@ export const translations = {
       copyright: 'Всички права запазени.',
       contact: 'Контакти',
       connect: 'Свържете се',
+    },
+    comparison: {
+      title: 'Как',
+      titleHighlight: 'намираме вашите клиенти',
+      step1Title: 'Одит преди архитектура',
+      step1Desc: 'Започваме с дълбок одит на вашите процеси и определяме точно къде ИИ може да създаде измерима стойност — преди да напишем и един ред код.',
+      step1Query: 'ИИ одит на бизнес процеси',
+      step2Title: 'Резултати преди фактури',
+      step2Desc: 'Показваме очакваните резултати и ROI преди да се ангажирате. Виждате плана, сроковете и прогнозирания ефект — след това решавате.',
+      step2Query: 'ROI от внедряване на ИИ',
+      step2Results: ['3× по-бърза квалификация на лийдове', 'Автоматизирани follow-up съобщения', 'Намаляване на ръчното въвеждане с 80%'],
     },
   },
 } as const
