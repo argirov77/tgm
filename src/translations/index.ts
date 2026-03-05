@@ -64,6 +64,7 @@ export const translations = {
       step2Desc: 'We show you the expected outcomes and ROI before you commit. You see the plan, the timeline, and the projected impact — then decide.',
       step2Query: 'AI implementation ROI calculator',
       step2Results: ['3× faster lead qualification', 'Automated client follow-ups', 'Reduced manual data entry by 80%'],
+      totalSales: 'Total Sales',
     },
   },
   ru: {
@@ -129,6 +130,7 @@ export const translations = {
       step2Desc: 'Мы показываем ожидаемые результаты и ROI до принятия решения. Вы видите план, сроки и прогнозируемый эффект — и только потом решаете.',
       step2Query: 'ROI от внедрения ИИ',
       step2Results: ['Квалификация лидов в 3× быстрее', 'Автоматические follow-up с клиентами', 'Снижение ручного ввода данных на 80%'],
+      totalSales: 'Общие продажи',
     },
   },
   bg: {
@@ -194,6 +196,7 @@ export const translations = {
       step2Desc: 'Показваме очакваните резултати и ROI преди да се ангажирате. Виждате плана, сроковете и прогнозирания ефект — след това решавате.',
       step2Query: 'ROI от внедряване на ИИ',
       step2Results: ['3× по-бърза квалификация на лийдове', 'Автоматизирани follow-up съобщения', 'Намаляване на ръчното въвеждане с 80%'],
+      totalSales: 'Общи продажби',
     },
   },
 } as const
