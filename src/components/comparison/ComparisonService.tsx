@@ -7,8 +7,6 @@ import { useLanguage } from '@/context/LanguageContext'
 
 import IdentifyingStep from './IdentifyingStep'
 import TargetingStep   from './TargetingStep'
-import ConnectingStep  from './ConnectingStep'
-
 export default function ComparisonService() {
   const { t } = useLanguage()
 
@@ -48,8 +46,6 @@ export default function ComparisonService() {
           results={[...t.comparison.step2Results]}
         />
 
-        {/* 3. Connecting */}
-        <ConnectingStep />
       </div>
     </motion.section>
   )
