@@ -25,7 +25,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white shadow sticky top-0 z-50">
+    <header className="sticky top-0 z-50" style={{ backgroundColor: '#0F172A', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" aria-label="TGMind AI Home">
@@ -51,21 +51,14 @@ export default function Header() {
                   <li key={link.href} className="relative group">
                     <Link
                       href={link.href}
-                      className={`
-                        text-lg font-medium transition-colors duration-200
-                        ${isActive ? 'text-teal' : 'text-gray-800'}
-                        hover:text-teal
-                      `}
+                      className="font-inter text-base font-medium transition-colors duration-200"
+                      style={{ color: isActive ? '#3B82F6' : '#E5E7EB' }}
                     >
                       {link.label}
                     </Link>
                     <span
-                      className={`
-                        absolute left-0 -bottom-1 h-0.5 bg-teal transition-all
-                        duration-200
-                        ${isActive ? 'w-full' : 'w-0'}
-                        group-hover:w-full
-                      `}
+                      className={`absolute left-0 -bottom-1 h-0.5 transition-all duration-200 ${isActive ? 'w-full' : 'w-0'} group-hover:w-full`}
+                      style={{ backgroundColor: '#3B82F6' }}
                     />
                   </li>
                 )
@@ -74,16 +67,17 @@ export default function Header() {
           </nav>
 
           {/* Language switcher */}
-          <div className="flex items-center border border-gray-200 rounded-full overflow-hidden text-sm font-semibold">
+          <div className="flex items-center overflow-hidden text-sm font-semibold" style={{ border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px' }}>
             {LANGUAGES.map(({ code, label }, i) => (
               <button
                 key={code}
                 onClick={() => setLang(code)}
-                className={`
-                  px-3 py-1 transition-colors duration-200
-                  ${lang === code ? 'bg-teal text-white' : 'text-gray-600 hover:bg-gray-100'}
-                  ${i > 0 ? 'border-l border-gray-200' : ''}
-                `}
+                className="px-3 py-1 transition-colors duration-200"
+                style={{
+                  backgroundColor: lang === code ? '#3B82F6' : 'transparent',
+                  color: lang === code ? '#fff' : '#9CA3AF',
+                  borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.12)' : 'none',
+                }}
               >
                 {label}
               </button>

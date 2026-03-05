@@ -28,8 +28,8 @@ export const translations = {
       cta: 'See how we work',
     },
     affiliateNetwork: {
-      title: 'What We',
-      titleHighlight: 'Do',
+      title: 'How We',
+      titleHighlight: 'Work',
       step1Title: 'AI Audit',
       step1Desc: 'We interview your team, map processes, identify automation opportunities. Written report in 2 weeks.',
       step2Title: 'Roadmap',
@@ -82,8 +82,8 @@ export const translations = {
       cta: 'Посмотреть, как мы работаем',
     },
     affiliateNetwork: {
-      title: 'Что мы',
-      titleHighlight: 'делаем',
+      title: 'Как мы',
+      titleHighlight: 'работаем',
       step1Title: 'ИИ-аудит',
       step1Desc: 'Интервьюируем вашу команду, анализируем процессы, выявляем возможности для автоматизации. Письменный отчёт за 2 недели.',
       step2Title: 'Дорожная карта',
@@ -136,8 +136,8 @@ export const translations = {
       cta: 'Вижте как работим',
     },
     affiliateNetwork: {
-      title: 'Какво',
-      titleHighlight: 'правим',
+      title: 'Как',
+      titleHighlight: 'работим',
       step1Title: 'ИИ одит',
       step1Desc: 'Интервюираме екипа ви, анализираме процесите, намираме възможности за автоматизация. Писмен доклад за 2 седмици.',
       step2Title: 'Пътна карта',

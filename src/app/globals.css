@@ -1,5 +1,5 @@
 /* globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,9 @@
 
 /* Дополнительные глобальные стили (при необходимости) */
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #0F172A;
+  color: #E5E7EB;
 }
 html, body {
   scroll-behavior: smooth;
@@ -21,34 +23,37 @@ body {
 }
 @layer utilities {
   .text-teal {
-    @apply text-[#00A9BF];
+    @apply text-[#06B6D4];
   }
   .text-darkBlue {
-    @apply text-[#00347E];
+    @apply text-[#E5E7EB];
   }
   .bg-teal {
-    @apply bg-[#00A9BF];
+    @apply bg-[#06B6D4];
   }
   .bg-darkBlue {
-    @apply bg-[#00347E];
+    @apply bg-[#0F172A];
   }
   .text-glow {
     text-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
   .bg-primary {
-    background-color: #0066FF;
+    background-color: #3B82F6;
   }
   .hover\:bg-primary-hover:hover {
-    background-color: #0052CC;
+    background-color: #2563EB;
   }
   .text-dim {
     color: #9CA3AF;
   }
   .text-muted {
-    color: #6B7280;
+    color: #9CA3AF;
   }
   .font-space-grotesk {
     font-family: 'Space Grotesk', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
   }
 }
 html {
@@ -59,5 +64,5 @@ section[id] {
   /* Offset for the header height (approx 3rem = 48px) */
   scroll-margin-top: 3rem;
   scroll-snap-align: start;
-  
+
 }

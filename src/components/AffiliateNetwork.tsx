@@ -39,28 +39,28 @@ export default function AffiliateNetwork() {
   return (
     <motion.section
       id="affiliate"
-      className="relative bg-white py-24 overflow-hidden"
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: '#0F172A' }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      {/* Background diagonals */}
+      {/* Subtle glow */}
       <div
-        className="absolute top-0 left-0 w-2/3 h-full bg-teal-100 opacity-20
-                   transform -rotate-12 origin-top-left pointer-events-none"
-        aria-hidden
-      />
-      <div
-        className="absolute bottom-0 right-0 w-2/3 h-full bg-darkBlue/20 opacity-20
-                   transform rotate-12 origin-bottom-right pointer-events-none"
+        className="absolute bottom-0 right-0 pointer-events-none"
+        style={{
+          width: '40%',
+          height: '50%',
+          background: 'radial-gradient(ellipse at 80% 80%, rgba(59,130,246,0.08) 0%, transparent 70%)',
+        }}
         aria-hidden
       />
 
       <div className="relative z-10 container mx-auto px-6">
         {/* Title */}
-        <h2 className="text-center font-poppins font-bold text-darkBlue text-4xl md:text-5xl mb-12">
-          {t.affiliateNetwork.title} <span className="text-teal">{t.affiliateNetwork.titleHighlight}</span>
+        <h2 className="text-center font-space-grotesk font-semibold text-4xl md:text-5xl mb-12" style={{ color: '#E5E7EB' }}>
+          {t.affiliateNetwork.title} <span style={{ color: '#3B82F6' }}>{t.affiliateNetwork.titleHighlight}</span>
         </h2>
 
         <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-8">
@@ -68,18 +68,23 @@ export default function AffiliateNetwork() {
             <React.Fragment key={step.id}>
               <motion.div
                 variants={cardVariants}
-                className="relative flex-1 max-w-xs bg-white rounded-2xl p-6 shadow-lg
-                           hover:shadow-2xl transition-shadow duration-300"
+                className="relative flex-1 max-w-xs p-6 transition-shadow duration-300"
+                style={{
+                  backgroundColor: '#111827',
+                  borderRadius: '12px',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                }}
               >
                 <span
-                  className="absolute top-0 left-1/2 w-12 h-1 bg-gradient-to-r
-                             from-teal to-darkBlue -translate-x-1/2 rounded-full"
+                  className="absolute top-0 left-1/2 w-12 h-1 -translate-x-1/2 rounded-full"
+                  style={{ background: 'linear-gradient(to right, #3B82F6, #06B6D4)' }}
                 />
                 <div className="mt-4 text-center space-y-3 z-10 relative">
-                  <h3 className="text-lg font-semibold text-darkBlue">
+                  <h3 className="font-space-grotesk text-lg font-semibold" style={{ color: '#E5E7EB' }}>
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{step.desc}</p>
+                  <p className="font-inter text-sm" style={{ color: '#9CA3AF' }}>{step.desc}</p>
                 </div>
               </motion.div>
 
@@ -95,7 +100,7 @@ export default function AffiliateNetwork() {
                   >
                     <path
                       d="M0 1 L100 1"
-                      stroke="#22d3ee"
+                      stroke="#3B82F6"
                       strokeWidth="2"
                       strokeDasharray="8 8"
                       strokeLinecap="round"
@@ -110,7 +115,7 @@ export default function AffiliateNetwork() {
                   >
                     <path
                       d="M1 0 L1 100"
-                      stroke="#22d3ee"
+                      stroke="#3B82F6"
                       strokeWidth="2"
                       strokeDasharray="4 4"
                       strokeLinecap="round"
@@ -126,8 +131,10 @@ export default function AffiliateNetwork() {
         <motion.div className="mt-12 text-center" variants={cardVariants}>
           <Link
             href="mailto:hello@tgmind-ai.com"
-            className="inline-block bg-teal hover:bg-teal-700 text-white px-8 py-3 rounded-full
-                       font-medium shadow-lg transition-colors duration-300"
+            className="inline-block text-white font-inter font-medium shadow-lg transition-colors duration-300"
+            style={{ backgroundColor: '#3B82F6', borderRadius: '8px', padding: '14px 28px' }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#2563EB')}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#3B82F6')}
           >
             {t.affiliateNetwork.cta}
           </Link>

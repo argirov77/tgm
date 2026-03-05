@@ -16,15 +16,17 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative bg-white py-20 overflow-hidden"
+      className="relative py-20 overflow-hidden"
+      style={{ backgroundColor: '#111827' }}
     >
-      {/* Soft diagonal accents */}
+      {/* Subtle accent glow */}
       <div
-        className="absolute top-0 right-0 w-2/3 h-full bg-teal opacity-10 transform rotate-12 origin-top-right pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-0 left-0 w-2/3 h-full bg-darkBlue opacity-10 transform -rotate-12 origin-bottom-left pointer-events-none"
+        className="absolute top-0 right-0 pointer-events-none"
+        style={{
+          width: '40%',
+          height: '50%',
+          background: 'radial-gradient(ellipse at 80% 20%, rgba(6,182,212,0.07) 0%, transparent 70%)',
+        }}
         aria-hidden="true"
       />
 
@@ -35,7 +37,8 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center font-poppins font-bold text-darkBlue text-3xl md:text-4xl mb-4"
+          className="text-center font-space-grotesk font-semibold text-3xl md:text-4xl mb-4"
+          style={{ color: '#E5E7EB' }}
         >
           {t.about.title}
         </motion.h2>
@@ -46,7 +49,8 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mx-auto max-w-3xl text-center text-gray-700 text-lg md:text-xl mb-12"
+          className="font-inter mx-auto max-w-3xl text-center text-lg md:text-xl mb-12"
+          style={{ color: '#9CA3AF' }}
         >
           {t.about.intro}
         </motion.p>
@@ -60,15 +64,24 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="bg-gray-50 p-6 rounded-xl shadow-lg text-center"
+              className="p-6 text-center"
+              style={{
+                backgroundColor: '#0F172A',
+                borderRadius: '12px',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
             >
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-teal rounded-full text-white text-xl font-semibold">
+              <div
+                className="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-white text-xl font-semibold"
+                style={{ backgroundColor: '#3B82F6', borderRadius: '8px' }}
+              >
                 {i + 1}
               </div>
-              <h3 className="font-poppins text-darkBlue text-xl font-bold mb-2">
+              <h3 className="font-space-grotesk text-xl font-semibold mb-2" style={{ color: '#E5E7EB' }}>
                 {card.title}
               </h3>
-              <p className="text-gray-600 text-base">
+              <p className="font-inter text-base" style={{ color: '#9CA3AF' }}>
                 {card.text}
               </p>
             </motion.div>
@@ -85,7 +98,10 @@ export default function About() {
         >
           <a
             href="#services"
-            className="inline-block bg-teal hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-full shadow-md transition"
+            className="inline-block text-white font-inter font-medium shadow-md transition"
+            style={{ backgroundColor: '#3B82F6', borderRadius: '8px', padding: '14px 28px' }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#2563EB')}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#3B82F6')}
           >
             {t.about.cta}
           </a>
