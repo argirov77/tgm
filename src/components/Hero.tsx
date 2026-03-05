@@ -61,11 +61,11 @@ export default function Hero() {
           className="font-space-grotesk text-darkBlue text-5xl md:text-6xl lg:text-7xl font-bold mb-12 leading-tight"
           style={{ textAlign: 'left' }}
         >
-          <span className="font-normal">{t.hero.line1}</span>
+          <span className="font-bold">{t.hero.line1}</span>
           <br />
-          <em className="font-bold not-italic">{t.hero.line2}</em>
+          <span className="font-normal" style={{ color: '#374151' }}>{t.hero.line2}</span>
           <br />
-          <span style={{ color: '#9CA3AF', fontWeight: 400 }}>{t.hero.line3}</span>
+          <span style={{ color: '#00A9BF', fontWeight: 700 }}>{t.hero.line3}</span>
         </motion.h1>
 
         <motion.div
