@@ -106,24 +106,24 @@ export default function Team() {
                     href={contactHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative w-36 h-36 mb-4 rounded-full overflow-hidden ring-4 ring-[#0F172A] transition-transform group-hover:scale-105"
+                    className="relative w-44 h-44 mb-4 rounded-full overflow-hidden ring-4 ring-[#0F172A] transition-transform group-hover:scale-105"
                     style={{ backgroundColor: '#06B6D4' }}
                   >
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
-                      sizes="144px"
+                      sizes="176px"
                       className="object-cover"
                     />
                   </a>
                 ) : (
-                  <div className="relative w-36 h-36 mb-4 rounded-full overflow-hidden ring-4 ring-[#0F172A]" style={{ backgroundColor: '#06B6D4' }}>
+                  <div className="relative w-44 h-44 mb-4 rounded-full overflow-hidden ring-4 ring-[#0F172A]" style={{ backgroundColor: '#06B6D4' }}>
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
-                      sizes="144px"
+                      sizes="176px"
                       className="object-cover"
                     />
                   </div>
